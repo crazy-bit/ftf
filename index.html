@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Ftf by crazy-bit</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Ftf</h1>
+        <h2>Function Test Frame</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/crazy-bit/ftf/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/crazy-bit/ftf/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/crazy-bit/ftf" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <p>函数测试框架，可以用于程序API的测试组件，可以用于程序的调试工具。其支持的功能如下：<br>
+   1 - 提供类似于shell的输入提示和命令的自动匹配<br>
+   2 - 提供命令的记忆(上下键<br>
+   3 - 提供命令的自动匹配，命令可以由多个侵害分割字符串组成，如"address to ip IP"<br><br><br>
+函数测试框架中命令由命令和参数两部分组成，命令部分由框架完成完全匹配，参数部分以argc=参数个数，argv=第一个参数地址的形式式传入给调用的函数处理<br><br><br>
+-----------------------------------------------------------------<br>
+使用示例：[具体示例参见api.c]<br>
+向函数测试框架中添加一个测试函数test Str，输出输入的第一个字符串<br>
+DEFUN(test_cmd_t,<br>
+    test_cmd_n,<br>
+    "test STR",<br>
+    "Usage: test STR\n"<br>
+    "  Parameters: STR - string to print\n")<br>
+{<br>
+    printf("Str=%s\n", argv[0]);<br>
+    return 0;<br>
+}<br><br><br>
+int main()<br>
+{<br>
+    install_element(&amp;test_cmd_n);<br>
+    ftf_run();<br>
+    return 0;<br></p>
+
+<h2>
+<a name="" class="anchor" href="#"><span class="octicon octicon-link"></span></a>}<br>
+</h2>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
